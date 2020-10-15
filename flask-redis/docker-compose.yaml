@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    image: sid200026/flask-redis
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app # Real time change
+    networks:
+      - mynet
+    environment:
+      FLASK_ENV: development
+  redis:
+    image: redis:${REDIS_VERSION} # Variable substitution
+    networks:
+      - mynet
+
+networks:
+  mynet:

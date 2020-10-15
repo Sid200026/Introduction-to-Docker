@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  web:
+    build: . # Look for the dockerfile in the current directory
+    image: sid200026/flask:1.0.0 # Name of the image and tag
+    ports:
+      - 5000:5000 # Port mapping
