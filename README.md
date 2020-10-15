@@ -10,6 +10,7 @@
 - [ Docker Hub](#dockerhub)
 - [ Debugging Containers](#debugging)
 - [ Docker Compose](#compose)
+- [ To Learn](#learn)
 
   <a name="Terminologies" />
 
@@ -274,6 +275,8 @@ docker logs -f dev-api
 docker exec -it dev-api /bin/sh
 ```
 
+---
+
 <a name="compose" />
 
 ## Docker Compose
@@ -285,3 +288,13 @@ docker-compose up -d --scale web=3
 ```
 
 3 containers will be created for the service web. Doesn't work if it involves port mapping since all three containers will require the same port.
+
+---
+
+<a name="learn" />
+
+## To Learn
+
+- Docker Networks
+- Multistage Builds
+- Kubernetes
